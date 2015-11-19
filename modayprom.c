@@ -1,12 +1,12 @@
 #include<stdio.h>
 int main()
 {
-	int moda[10]={0,0,0,0,0,0,0,0,0,0,},mayor;
-	int arreglo[10],promedio=0,i,d;
+	int moda[10]={0,0,0,0,0,0,0,0,0,0,};
+	int arreglo[10],promedio=0,i;
 	float p;
-		int r=0;
+		int r=0,pr;
 	
-	printf("Programa que calcula el promedio y la mosa de 10 calificaciones.\n\n");
+	printf("Programa que calcula el promedio y la moda de 10 calificaciones.\n\n");
 	for(i=0;i<10;i++)
 	{
 		printf("Introduce la calificacion %d ",i+1);
@@ -28,14 +28,14 @@ int main()
 	}
 	for(i=0;i<10;i++)
 	{
-		if (moda[arreglo[i]-1]>r)
+		if (moda[i]>r)
 		{
-			r=moda[arreglo[i]-1];
-			r=arreglo[i];
+			r=moda[i];
+			pr=i;
 		}
 	}
 	
-	printf("La moda es: %d \n",r);
+	printf("La moda es: %d \n",pr+1);
 	p=promedio*0.1;
 	printf("El promedio es: %f",p);
 }
